@@ -1,5 +1,5 @@
 console.log("heelo");
-gsap.registerPlugin(Draggable);
+// gsap.registerPlugin(Draggable);
 
 function horz() {
   const scroller = document.querySelector(".horz_scroll");

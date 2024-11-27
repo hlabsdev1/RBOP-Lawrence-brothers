@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'Courier BT' ;
+    src: url('fonts/courier-font.ttf');
+}
+
+h1 {
+    font-family: 'Courier BT', serif;
+    font-weight: 700;
+    font-size: 5rem;
+}

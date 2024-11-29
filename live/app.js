@@ -520,7 +520,7 @@ html:not(.wf-design-mode) .styleguide_guide_wrap {
 
 // Start function call with params
 const params = {
-  el: document.querySelector('.content'),
+  el: document.querySelector('[data-module-name="rbgemc-rb3/custom-scripts-panel/custom-scripts-panel-controller"]'),
 };
 
 start(params);

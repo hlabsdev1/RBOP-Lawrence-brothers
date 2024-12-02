@@ -37,8 +37,8 @@ function start({ el }) {
       console.log('GSAP object:', gsap);
       //dependent scripts
       const dScripts = [
-        'https://4c36mw.csb.app/js/app.js',
-        'https://4c36mw.csb.app/js/vid.js',
+        'https://rbop-lawrence-brothers.netlify.app/js/app.js',
+        'https://rbop-lawrence-brothers.netlify.app/js/vid.js',
       ];
 
       dScripts.forEach((src) => {

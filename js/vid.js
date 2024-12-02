@@ -1,36 +1,40 @@
-console.log("heelo");
-gsap.registerPlugin(Draggable);
+function btsVidFunction() {
+  const allItems = document.querySelectorAll(".vid_item-embed");
+  allItems.forEach((item) => {
+    const vid = item.querySelector("video");
+    vid.pause();
+    if (vid) {
+      item.addEventListener("mouseover", () => {
+        if (vid.paused) {
+          vid.play();
+          console.log("is this working");
+        }
+      });
 
-function horz() {
-  const scroller = document.querySelector(".horz_scroll");
-  const scrollContainer = scroller.querySelector(".horz_track");
-  const hLine = scroller.querySelector(".horz_item-ab-h-line");
-  const jLine = scroller.querySelector(".horz_item-ab-j-line");
-  hLine.style.width = `${
-    scrollContainer.offsetWidth - scroller.offsetWidth * 0.25
-  }px`;
-  jLine.style.width = `${
-    scrollContainer.offsetWidth - scroller.offsetWidth * 0.28
-  }px`;
-
-  const maxDragX = -(scrollContainer.offsetWidth - scroller.offsetWidth);
-  // console.log(maxDragX);
-
-  Draggable.create(scrollContainer, {
-    type: "x",
-    bounds: {
-      minX: maxDragX,
-      maxX: 0,
-    },
+      item.addEventListener("mouseout", () => {
+        vid.pause();
+      });
+    }
   });
 }
 
-// Run the function after the DOM is fully loaded
-document.addEventListener("DOMContentLoaded", () => {
-  horz(); // Call the function on DOM load
-});
+function sectionVid() {
+  const videoTrigger = document.querySelector("#section-video-holder");
+  const video = videoTrigger.querySelector("#section-vid");
+  const vidButn = videoTrigger.querySelector(".play_button-wrap");
 
-// Run the function whenever the window is resized
-window.addEventListener("resize", () => {
-  horz(); // Call the function on window resize
-});
+  videoTrigger.addEventListener("click", () => {
+    if (video.paused) {
+      video.play();
+      vidButn.style.opacity = "0";
+    } else {
+      video.pause();
+      vidButn.style.opacity = "1";
+    }
+  });
+}
+
+const body = document.querySelector("body");
+body.click;
+btsVidFunction();
+sectionVid();

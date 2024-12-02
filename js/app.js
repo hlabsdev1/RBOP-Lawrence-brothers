@@ -459,18 +459,16 @@ function lenisFunction() {
   }
   
   // Run the function after the DOM is fully loaded
-  document.addEventListener("DOMContentLoaded", () => {
-    heroGroup();
-    wrappingLine();
-    headerGroup();
-    bodyGroup();
-    colImgGroup();
-    smquoteAnime();
-    quoteAnime();
-    bleedImgAnimation();
-    editorialAnime();
-    tabs();
-  });
+  heroGroup();
+  wrappingLine();
+  headerGroup();
+  bodyGroup();
+  colImgGroup();
+  smquoteAnime();
+  quoteAnime();
+  bleedImgAnimation();
+  editorialAnime();
+  tabs();
   
   // // Run the function whenever the window is resized
   window.addEventListener("resize", () => {
